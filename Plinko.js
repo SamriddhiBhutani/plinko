@@ -1,9 +1,11 @@
 class Plinko{
     constructor (x,y){
         var options = {
-            isStatic: false
+            isStatic: true
         }
-        this.body = Bodies.circle(x,y,10)
+        this.body = Bodies.circle(x,y,10,options)
+        this.x = x;
+        this.y = y;
         this.radius = 10; 
         World.add(world,this.body);
     }
